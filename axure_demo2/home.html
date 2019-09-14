@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/home/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/home/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (Rectangle) -->
+      <div id="u0" class="ax_default paragraph">
+        <div id="u0_div" class=""></div>
+        <div id="u0_text" class="text ">
+          <p><span>自从存在以来，Python一直是面向对象的语言。 因此，创建和使用类和对象是非常容易的。 本章将学习如何使用Python面向对象编程。</span></p><p><span>如果您以前没有面向对象(OO)编程的经验，可能需要查阅介绍面向对象(OO)编程课程或至少学习一些有关教程，以便掌握基本概念。</span></p><p><span>下面是面向对象编程(OOP)的一个小介绍，以帮助您快速入门学习 -</span></p><p><span>OOP术语概述 </span></p><p><span><br></span></p><p><span>类 - 用于定义表示用户定义对象的一组属性的原型。属性是通过点符号访问的数据成员(类变量和实例变量)和方法。类变量 - 由类的所有实例共享的变量。 类变量在类中定义，但在类的任何方法之外。 类变量不像实例变量那样频繁使用。数据成员 - 保存与类及其对象相关联的数据的类变量或实例变量。函数重载 - 将多个行为分配给特定函数。 执行的操作因涉及的对象或参数的类型而异。实例变量 - 在方法中定义并仅属于类的当前实例的变量。继承 - 将类的特征传递给从其派生的其他类。实例 - 某个类的单个对象。 例如，对象obj属于Circle类，它是Circle类的实例。实例化 - 创建类的实例。方法 - 在类定义中定义的一种特殊类型的函数。对象 - 由其类定义的数据结构的唯一实例。对象包括数据成员(类变量和实例变量)和方法。运算符重载 - 将多个函数分配给特定的运算符。</span></p><p><span>1.创建类class语句创建一个新的类定义。 类的名称紧跟在class关键字之后，在类的名称之后紧跟冒号，如下 -</span></p><p><span>class ClassName:</span></p><p><span>&nbsp;&nbsp; 'Optional class documentation string'</span></p><p><span>&nbsp;&nbsp; class_suite</span></p><p><span>Python</span></p><p><span><br></span></p><p><span>该类有一个文档字符串，可以通过ClassName.__doc__访问。class_suite由定义类成员，数据属性和函数的所有组件语句组成。</span></p><p><span>示例</span></p><p><span>以下是一个简单的Python类的例子 -</span></p><p><span>class Employee:</span></p><p><span>&nbsp;&nbsp; 'Common base class for all employees'</span></p><p><span>&nbsp;&nbsp; empCount = 0</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def __init__(self, name, salary):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; self.name = name</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; self.salary = salary</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; Employee.empCount += 1</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def displayCount(self):</span></p><p><span>&nbsp;&nbsp; &nbsp; print &quot;Total Employee %d&quot; % Employee.empCount</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def displayEmployee(self):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; print &quot;Name : &quot;, self.name,&nbsp; &quot;, Salary: &quot;, self.salary</span></p><p><span>Python</span></p><p><span><br></span></p><p><span>变量empCount是一个类变量，其值在此类中的所有实例之间共享。 这可以从类或类之外的Employee.empCount访问。</span></p><p><span>第一个方法__init __()是一种特殊的方法，当创建此类的新实例时，该方法称为Python构造函数或初始化方法。</span></p><p><span>声明其他类方法，如正常函数，但每个方法的第一个参数是self。 Python将self参数添加到列表中; 调用方法时不需要包含它。</span></p><p><span><br></span></p><p><span>2.创建实例对象要创建类的实例，可以使用类名调用该类，并传递其__init__方法接受的任何参数。</span></p><p><span>## This would create first object of Employee class</span></p><p><span>emp1 = Employee(&quot;Maxsu&quot;, 2000)</span></p><p><span>## This would create second object of Employee class</span></p><p><span>emp2 = Employee(&quot;Kobe&quot;, 5000)</span></p><p><span>Python</span></p><p><span>3.访问属性可以使用带有对象的点(.)运算符来访问对象的属性。 类变量将使用类名访问如下 -</span></p><p><span>emp1.displayEmployee()</span></p><p><span>emp2.displayEmployee()</span></p><p><span>print (&quot;Total Employee %d&quot; % Employee.empCount)</span></p><p><span>Python</span></p><p><span>现在把所有的概念放在一起 -</span></p><p><span>#!/usr/bin/python3</span></p><p><span><br></span></p><p><span>class Employee:</span></p><p><span>&nbsp;&nbsp; 'Common base class for all employees'</span></p><p><span>&nbsp;&nbsp; empCount = 0</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def __init__(self, name, salary):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; self.name = name</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; self.salary = salary</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; Employee.empCount += 1</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def displayCount(self):</span></p><p><span>&nbsp;&nbsp; &nbsp; print (&quot;Total Employee %d&quot; % Employee.empCount)</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def displayEmployee(self):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; print (&quot;Name : &quot;, self.name,&nbsp; &quot;, Salary: &quot;, self.salary)</span></p><p><span><br></span></p><p><span><br></span></p><p><span>#This would create first object of Employee class&quot;</span></p><p><span>emp1 = Employee(&quot;Maxsu&quot;, 2000)</span></p><p><span>#This would create second object of Employee class&quot;</span></p><p><span>emp2 = Employee(&quot;Kobe&quot;, 5000)</span></p><p><span>emp1.displayEmployee()</span></p><p><span>emp2.displayEmployee()</span></p><p><span>print (&quot;Total Employee %d&quot; % Employee.empCount)</span></p><p><span>Python</span></p><p><span>当执行上述代码时，会产生以下结果 -</span></p><p><span>Name :&nbsp; Maxsu ,Salary:&nbsp; 2000</span></p><p><span>Name :&nbsp; Kobe ,Salary:&nbsp; 5000</span></p><p><span>Total Employee 2</span></p><p><span>Python</span></p><p><span>可以随时添加，删除或修改类和对象的属性 -</span></p><p><span>emp1.salary = 7000&nbsp; # Add an 'salary' attribute.</span></p><p><span>emp1.name = 'xyz'&nbsp; # Modify 'age' attribute.</span></p><p><span>del emp1.salary&nbsp; # Delete 'age' attribute.</span></p><p><span>Python</span></p><p><span>如果不是使用普通语句访问属性，可以使用以下函数 -</span></p><p><span><br></span></p><p><span>getattr(obj，name [，default]) - 访问对象的属性。hasattr(obj，name) - 检查属性是否存在。setattr(obj，name，value) - 设置一个属性。如果属性不存在，那么它将被创建。delattr(obj，name) - 删除一个属性。</span></p><p><span>下面是一此使用示例 - </span></p><p><span>hasattr(emp1, 'salary')&nbsp; &nbsp; # Returns true if 'salary' attribute exists</span></p><p><span>getattr(emp1, 'salary')&nbsp; &nbsp; # Returns value of 'salary' attribute</span></p><p><span>setattr(emp1, 'salary', 7000) # Set attribute 'salary' at 7000</span></p><p><span>delattr(emp1, 'salary')&nbsp; &nbsp; # Delete attribute 'salary'</span></p><p><span>Python</span></p><p><span>3.内置类属性每个Python类保持以下内置属性，并且可以像任何其他属性一样使用点运算符访问它们 -</span></p><p><span><br></span></p><p><span>__dict__ - 包含该类的命名空间的字典。__doc__ - 类文档字符串或无，如果未定义。__name__ - 类名。__module__ - 定义类的模块名称。此属性在交互模式下的值为“main”。__bases__ - 一个包含基类的空元组，按照它们在基类列表中出现的顺序。</span></p><p><span>对于上述类，尝试访问所有这些属性 -</span></p><p><span>#!/usr/bin/python3</span></p><p><span><br></span></p><p><span>class Employee:</span></p><p><span>&nbsp;&nbsp; 'Common base class for all employees'</span></p><p><span>&nbsp;&nbsp; empCount = 0</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def __init__(self, name, salary):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; self.name = name</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; self.salary = salary</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; Employee.empCount += 1</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def displayCount(self):</span></p><p><span>&nbsp;&nbsp; &nbsp; print (&quot;Total Employee %d&quot; % Employee.empCount)</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def displayEmployee(self):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; print (&quot;Name : &quot;, self.name,&nbsp; &quot;, Salary: &quot;, self.salary)</span></p><p><span><br></span></p><p><span>emp1 = Employee(&quot;Maxsu&quot;, 2000)</span></p><p><span>emp2 = Employee(&quot;Bryant&quot;, 5000)</span></p><p><span>print (&quot;Employee.__doc__:&quot;, Employee.__doc__)</span></p><p><span>print (&quot;Employee.__name__:&quot;, Employee.__name__)</span></p><p><span>print (&quot;Employee.__module__:&quot;, Employee.__module__)</span></p><p><span>print (&quot;Employee.__bases__:&quot;, Employee.__bases__)</span></p><p><span>print (&quot;Employee.__dict__:&quot;, Employee.__dict__ )</span></p><p><span>Python</span></p><p><span>当执行上述代码时，会产生以下结果 -</span></p><p><span>Employee.__doc__: Common base class for all employees</span></p><p><span>Employee.__name__: Employee</span></p><p><span>Employee.__module__: __main__</span></p><p><span>Employee.__bases__: (&lt;class 'object'&gt;,)</span></p><p><span>Employee.__dict__: {</span></p><p><span>&nbsp;&nbsp; 'displayCount': &lt;function Employee.displayCount at 0x0160D2B8&gt;, </span></p><p><span>&nbsp;&nbsp; '__module__': '__main__', '__doc__': 'Common base class for all employees', </span></p><p><span>&nbsp;&nbsp; 'empCount': 2, '__init__': </span></p><p><span>&nbsp;&nbsp; &lt;function Employee.__init__ at 0x0124F810&gt;, 'displayEmployee': </span></p><p><span>&nbsp;&nbsp; &lt;function Employee.displayEmployee at 0x0160D300&gt;,</span></p><p><span>&nbsp;&nbsp; '__weakref__': </span></p><p><span>&nbsp;&nbsp; &lt;attribute '__weakref__' of 'Employee' objects&gt;, '__dict__': </span></p><p><span>&nbsp;&nbsp; &lt;attribute '__dict__' of 'Employee' objects&gt;</span></p><p><span>}</span></p><p><span>Python</span></p><p><span>4.销毁对象(垃圾收集)Python自动删除不需要的对象(内置类型或类实例)以释放内存空间。 Python定期回收不再使用的内存块的过程称为垃圾收集。</span></p><p><span>Python的垃圾收集器在程序执行期间运行，当对象的引用计数达到零时触发。 对象的引用计数随着指向它的别名数量而变化。</span></p><p><span>当对象的引用计数被分配一个新名称或放置在容器(列表，元组或字典)中时，它的引用计数会增加。 当用del删除对象的引用计数时，引用计数减少，其引用被重新分配，或者其引用超出范围。 当对象的引用计数达到零时，Python会自动收集它。</span></p><p><span>a = 40&nbsp; &nbsp; &nbsp; # Create object &lt;40&gt;</span></p><p><span>b = a&nbsp; &nbsp; &nbsp;&nbsp; # Increase ref. count&nbsp; of &lt;40&gt; </span></p><p><span>c = [b]&nbsp; &nbsp;&nbsp; # Increase ref. count&nbsp; of &lt;40&gt; </span></p><p><span><br></span></p><p><span>del a&nbsp; &nbsp; &nbsp;&nbsp; # Decrease ref. count&nbsp; of &lt;40&gt;</span></p><p><span>b = 100&nbsp; &nbsp;&nbsp; # Decrease ref. count&nbsp; of &lt;40&gt; </span></p><p><span>c[0] = -1&nbsp;&nbsp; # Decrease ref. count&nbsp; of &lt;40&gt;</span></p><p><span>Python</span></p><p><span>通常情况下，垃圾回收器会销毁孤立的实例并回收其空间。 但是，类可以实现调用析构函数的特殊方法__del__()，该方法在实例即将被销毁时被调用。 此方法可能用于清理实例使用的任何非内存资源。</span></p><p><span>示例</span></p><p><span>这个__del__()析构函数打印要被销毁的实例的类名 -</span></p><p><span>#!/usr/bin/python3</span></p><p><span><br></span></p><p><span>class Point:</span></p><p><span>&nbsp;&nbsp; def __init__( self, x=0, y=0):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; self.x = x</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; self.y = y</span></p><p><span>&nbsp;&nbsp; def __del__(self):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; class_name = self.__class__.__name__</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; print (class_name, &quot;destroyed&quot;)</span></p><p><span><br></span></p><p><span>pt1 = Point()</span></p><p><span>pt2 = pt1</span></p><p><span>pt3 = pt1</span></p><p><span>print (id(pt1), id(pt2), id(pt3));&nbsp;&nbsp; # prints the ids of the obejcts</span></p><p><span>del pt1</span></p><p><span>del pt2</span></p><p><span>del pt3</span></p><p><span>Python</span></p><p><span>当执行上述代码时，会产生以下结果 -</span></p><p><span>3083401324 3083401324 3083401324</span></p><p><span>Point destroyed</span></p><p><span>Python</span></p><p><span><br></span></p><p><span>注意 - 理想情况下，应该在单独的文件中定义类，然后使用import语句将其导入主程序文件。</span></p><p><span><br></span></p><p><span>在上面的例子中，假定Point类的定义包含在point.py中，并且其中没有其他可执行代码。</span></p><p><span>#!/usr/bin/python3</span></p><p><span>import point</span></p><p><span>p1 = point.Point()</span></p><p><span>Python</span></p><p><span>5.类继承使用类继承不用从头开始构建代码，可以通过在新类名后面的括号中列出父类来从一个预先存在的类派生它来创建一个类。</span></p><p><span>子类继承其父类的属性，可以像子类中一样定义和使用它们。子类也可以从父类代替代数据成员和方法。</span></p><p><span>语法</span></p><p><span>派生类被声明为很像它们的父类; 然而，继承的基类的列表在类名之后给出 -</span></p><p><span>class SubClassName (ParentClass1[, ParentClass2, ...]):</span></p><p><span>&nbsp;&nbsp; 'Optional class documentation string'</span></p><p><span>&nbsp;&nbsp; class_suite</span></p><p><span>Python</span></p><p><span>示例</span></p><p><span>#!/usr/bin/python3</span></p><p><span><br></span></p><p><span>class Parent:&nbsp; &nbsp; &nbsp; &nbsp; # define parent class</span></p><p><span>&nbsp;&nbsp; parentAttr = 100</span></p><p><span>&nbsp;&nbsp; def __init__(self):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; print (&quot;Calling parent constructor&quot;)</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def parentMethod(self):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; print ('Calling parent method')</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def setAttr(self, attr):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; Parent.parentAttr = attr</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def getAttr(self):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; print (&quot;Parent attribute :&quot;, Parent.parentAttr)</span></p><p><span><br></span></p><p><span>class Child(Parent): # define child class</span></p><p><span>&nbsp;&nbsp; def __init__(self):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; print (&quot;Calling child constructor&quot;)</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def childMethod(self):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; print ('Calling child method')</span></p><p><span><br></span></p><p><span>c = Child()&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # instance of child</span></p><p><span>c.childMethod()&nbsp; &nbsp; &nbsp; # child calls its method</span></p><p><span>c.parentMethod()&nbsp; &nbsp;&nbsp; # calls parent's method</span></p><p><span>c.setAttr(200)&nbsp; &nbsp; &nbsp;&nbsp; # again call parent's method</span></p><p><span>c.getAttr()&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # again call parent's method</span></p><p><span>Python</span></p><p><span>当执行上述代码时，会产生以下结果 -</span></p><p><span>Calling child constructor</span></p><p><span>Calling child method</span></p><p><span>Calling parent method</span></p><p><span>Parent attribute : 200</span></p><p><span>Python</span></p><p><span>以类似的方式，可以从多个父类来构建一个新的类，如下所示：</span></p><p><span>class A:&nbsp; &nbsp; &nbsp; &nbsp; # define your class A</span></p><p><span>.....</span></p><p><span><br></span></p><p><span>class B:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; # define your calss B</span></p><p><span>.....</span></p><p><span><br></span></p><p><span>class C(A, B):&nbsp;&nbsp; # subclass of A and B</span></p><p><span>.....</span></p><p><span>Python</span></p><p><span>可以使用issubclass()或isinstance()函数来检查两个类和实例之间的关系。</span></p><p><span><br></span></p><p><span>issubclass(sub，sup)布尔函数如果给定的子类sub确实是超类sup的子类返回True。isinstance(obj，Class)布尔函数如果obj是类Class的一个实例，或者是类的一个子类的实例则返回True。</span></p><p><span>重载方法可以随时重载父类的方法。 重载父方法的一个原因是：您可能希望在子类中使用特殊或不同的方法功能。</span></p><p><span>示例</span></p><p><span>#!/usr/bin/python3</span></p><p><span><br></span></p><p><span>class Parent:&nbsp; &nbsp; &nbsp; &nbsp; # define parent class</span></p><p><span>&nbsp;&nbsp; def myMethod(self):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; print ('Calling parent method')</span></p><p><span><br></span></p><p><span>class Child(Parent): # define child class</span></p><p><span>&nbsp;&nbsp; def myMethod(self):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; print ('Calling child method')</span></p><p><span><br></span></p><p><span>c = Child()&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; # instance of child</span></p><p><span>c.myMethod()&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; # child calls overridden method</span></p><p><span>Python</span></p><p><span>当执行上述代码时，会产生以下结果 -</span></p><p><span>Calling child method</span></p><p><span>Python</span></p><p><span>基本重载方法下表列出了可以在自己的类中覆盖的一些通用方法 -</span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span>编号</span></p><p><span>方法</span></p><p><span>描述</span></p><p><span>调用示例</span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span>1</span></p><p><span>__init__ ( self [,args...] )</span></p><p><span>构造函数(带任意可选参数)</span></p><p><span>obj = className(args)</span></p><p><span><br></span></p><p><span><br></span></p><p><span>2</span></p><p><span>__del__( self )</span></p><p><span>析构函数，删除一个对象</span></p><p><span>del obj</span></p><p><span><br></span></p><p><span><br></span></p><p><span>3</span></p><p><span>__repr__( self )</span></p><p><span>可评估求值的字符串表示</span></p><p><span>repr(obj)</span></p><p><span><br></span></p><p><span><br></span></p><p><span>4</span></p><p><span>__str__( self )</span></p><p><span>可打印的字符串表示</span></p><p><span>str(obj)</span></p><p><span><br></span></p><p><span><br></span></p><p><span>5</span></p><p><span>__cmp__ ( self, x )</span></p><p><span>对象比较</span></p><p><span>cmp(obj, x)</span></p><p><span><br></span></p><p><span><br></span></p><p><span><br></span></p><p><span>6.重载运算符假设已经创建了一个Vector类来表示二维向量。当使用加号(+)运算符执行运算时，它们会发生什么？ 很可能Python理解不了你想要做什么。</span></p><p><span>但是，可以在类中定义__add__方法来执行向量加法，然后将按照期望行为那样执行加法运算 -</span></p><p><span>示例</span></p><p><span>#!/usr/bin/python3</span></p><p><span><br></span></p><p><span>class Vector:</span></p><p><span>&nbsp;&nbsp; def __init__(self, a, b):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; self.a = a</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; self.b = b</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def __str__(self):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; return 'Vector (%d, %d)' % (self.a, self.b)</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def __add__(self,other):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; return Vector(self.a + other.a, self.b + other.b)</span></p><p><span><br></span></p><p><span>v1 = Vector(2,10)</span></p><p><span>v2 = Vector(5,-2)</span></p><p><span>print (v1 + v2)</span></p><p><span>Python</span></p><p><span>当执行上述代码时，会产生以下结果 -</span></p><p><span>Vector(7,8)</span></p><p><span>Python</span></p><p><span>7.数据隐藏对象的属性在类定义之外可能或不可见。需要使用双下划线前缀命名属性，然后这些属性将不会直接对外部可见。</span></p><p><span>示例</span></p><p><span>#!/usr/bin/python3</span></p><p><span><br></span></p><p><span>class JustCounter:</span></p><p><span>&nbsp;&nbsp; __secretCount = 0</span></p><p><span><br></span></p><p><span>&nbsp;&nbsp; def count(self):</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; self.__secretCount += 1</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; print (self.__secretCount)</span></p><p><span><br></span></p><p><span>counter = JustCounter()</span></p><p><span>counter.count()</span></p><p><span>counter.count()</span></p><p><span>print (counter.__secretCount)</span></p><p><span>Python</span></p><p><span>当执行上述代码时，会产生以下结果 -</span></p><p><span>1</span></p><p><span>2</span></p><p><span>Traceback (most recent call last):</span></p><p><span>&nbsp;&nbsp; File &quot;test.py&quot;, line 12, in &lt;module&gt;</span></p><p><span>&nbsp;&nbsp; &nbsp;&nbsp; print counter.__secretCount</span></p><p><span>AttributeError: JustCounter instance has no attribute '__secretCount'</span></p><p><span>Shell</span></p><p><span>Python通过内部更改名称来包含类名称来保护这些成员。 可以访问object._className__attrName等属性。如果将最后一行替换为以下，那么它适用于 -</span></p><p><span>.........................</span></p><p><span>print (counter._JustCounter__secretCount)原文出自【易百教程】，商业转载请联系作者获得授权，非商业请保留原文链接：https://www.yiibai.com/python/python_classes_objects.html</span></p><p><span><br></span></p><p><span><br></span></p>
+        </div>
+      </div>
+
+      <!-- 相对固定 (Dynamic Panel) -->
+      <div id="u1" class="ax_default" data-label="相对固定">
+        <div id="u1_state0" class="panel_state" data-label="State1" style="">
+          <div id="u1_state0_content" class="panel_state_content">
+
+            <!-- 鼠标点击上拉收起，下拉展示 (Group) -->
+            <div id="u2" class="ax_default" data-label="鼠标点击上拉收起，下拉展示" data-left="16" data-top="51" data-width="128" data-height="38">
+
+              <!-- person (Dynamic Panel) -->
+              <div id="u3" class="ax_default ax_default_hidden" data-label="person" style="display:none; visibility: hidden">
+                <div id="u3_state0" class="panel_state" data-label="State1" style="">
+                  <div id="u3_state0_content" class="panel_state_content">
+
+                    <!-- Unnamed (Menu) -->
+                    <div id="u4" class="ax_default">
+                      <img id="u4_menu" class="img " src="images/home/u4_menu.png" alt="u4_menu"/>
+
+                      <!-- Unnamed (Table) -->
+                      <div id="u5" class="ax_default">
+
+                        <!-- Unnamed (Menu Item) -->
+                        <div id="u6" class="ax_default menu_item">
+                          <img id="u6_img" class="img " src="images/home/u6.png"/>
+                          <div id="u6_text" class="text ">
+                            <p><span>马云</span></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (Menu Item) -->
+                        <div id="u7" class="ax_default menu_item">
+                          <img id="u7_img" class="img " src="images/home/u6.png"/>
+                          <div id="u7_text" class="text ">
+                            <p><span>马化腾</span></p>
+                          </div>
+                        </div>
+
+                        <!-- Unnamed (Menu Item) -->
+                        <div id="u8" class="ax_default menu_item">
+                          <img id="u8_img" class="img " src="images/home/u8.png"/>
+                          <div id="u8_text" class="text ">
+                            <p><span>马伊利</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (Image) -->
+                    <div id="u9" class="ax_default image">
+                      <img id="u9_img" class="img " src="images/home/u9.png"/>
+                    </div>
+
+                    <!-- Unnamed (Image) -->
+                    <div id="u10" class="ax_default image">
+                      <img id="u10_img" class="img " src="images/home/u9.png"/>
+                    </div>
+
+                    <!-- Unnamed (Image) -->
+                    <div id="u11" class="ax_default image">
+                      <img id="u11_img" class="img " src="images/home/u9.png"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) -->
+              <div id="u12" class="ax_default box_1">
+                <div id="u12_div" class=""></div>
+                <div id="u12_text" class="text ">
+                  <p><span>联系人列表</span></p>
+                </div>
+              </div>
+
+              <!-- Unnamed (Rectangle) [footnote] -->
+              <div id="u12_ann" class="annotation"></div>
+
+              <!-- Unnamed (Shape) -->
+              <div id="u13" class="ax_default icon">
+                <img id="u13_img" class="img " src="images/home/u13.png"/>
+              </div>
+            </div>
+
+            <!-- 淘宝搜索框 (Group) -->
+            <div id="u14" class="ax_default" data-label="淘宝搜索框" data-left="163" data-top="11" data-width="460" data-height="127">
+
+              <!-- search (Group) -->
+              <div id="u15" class="ax_default" data-label="search" data-left="163" data-top="41" data-width="460" data-height="53">
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u16" class="ax_default box_1">
+                  <div id="u16_div" class=""></div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u17" class="ax_default box_1">
+                  <div id="u17_div" class=""></div>
+                  <div id="u17_text" class="text ">
+                    <p><span>搜索</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- book_label (Group) -->
+              <div id="u18" class="ax_default" data-label="book_label" data-left="210" data-top="11" data-width="38" data-height="22">
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u19" class="ax_default box_1 ax_default_hidden" style="display:none; visibility: hidden">
+                  <div id="u19_div" class=""></div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u20" class="ax_default label">
+                  <div id="u20_div" class=""></div>
+                  <div id="u20_text" class="text ">
+                    <p><span>书籍</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- movie_label (Group) -->
+              <div id="u21" class="ax_default" data-label="movie_label" data-left="286" data-top="11" data-width="38" data-height="22">
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u22" class="ax_default box_1 ax_default_hidden" style="display:none; visibility: hidden">
+                  <div id="u22_div" class=""></div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u23" class="ax_default label">
+                  <div id="u23_div" class=""></div>
+                  <div id="u23_text" class="text ">
+                    <p><span>电影</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- music_label (Group) -->
+              <div id="u24" class="ax_default" data-label="music_label" data-left="362" data-top="11" data-width="38" data-height="22">
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u25" class="ax_default box_1 ax_default_hidden" style="display:none; visibility: hidden">
+                  <div id="u25_div" class=""></div>
+                </div>
+
+                <!-- Unnamed (Rectangle) -->
+                <div id="u26" class="ax_default label">
+                  <div id="u26_div" class=""></div>
+                  <div id="u26_text" class="text ">
+                    <p><span>音乐</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (Dynamic Panel) -->
+              <div id="u27" class="ax_default">
+                <div id="u27_state0" class="panel_state" data-label="书籍" style="">
+                  <div id="u27_state0_content" class="panel_state_content">
+
+                    <!-- Unnamed (Text Field) -->
+                    <div id="u28" class="ax_default text_field">
+                      <input id="u28_input" type="text" value=""/>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u29" class="ax_default label">
+                      <div id="u29_div" class=""></div>
+                      <div id="u29_text" class="text ">
+                        <p><span>文化苦旅</span></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u30" class="ax_default label">
+                      <div id="u30_div" class=""></div>
+                      <div id="u30_text" class="text ">
+                        <p><span>平凡的世界</span></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u31" class="ax_default label">
+                      <div id="u31_div" class=""></div>
+                      <div id="u31_text" class="text ">
+                        <p><span>资本论</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="u27_state1" class="panel_state" data-label="电影" style="visibility: hidden;">
+                  <div id="u27_state1_content" class="panel_state_content">
+
+                    <!-- Unnamed (Text Field) -->
+                    <div id="u32" class="ax_default text_field">
+                      <input id="u32_input" type="text" value=""/>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u33" class="ax_default label">
+                      <div id="u33_div" class=""></div>
+                      <div id="u33_text" class="text ">
+                        <p><span>三块广告牌</span></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u34" class="ax_default label">
+                      <div id="u34_div" class=""></div>
+                      <div id="u34_text" class="text ">
+                        <p><span>国家破产之日</span></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u35" class="ax_default label">
+                      <div id="u35_div" class=""></div>
+                      <div id="u35_text" class="text ">
+                        <p><span>la la land</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="u27_state2" class="panel_state" data-label="音乐" style="visibility: hidden;">
+                  <div id="u27_state2_content" class="panel_state_content">
+
+                    <!-- Unnamed (Text Field) -->
+                    <div id="u36" class="ax_default text_field">
+                      <input id="u36_input" type="text" value=""/>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u37" class="ax_default label">
+                      <div id="u37_div" class=""></div>
+                      <div id="u37_text" class="text ">
+                        <p><span>L-holiday</span></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u38" class="ax_default label">
+                      <div id="u38_div" class=""></div>
+                      <div id="u38_text" class="text ">
+                        <p><span>可乐</span></p>
+                      </div>
+                    </div>
+
+                    <!-- Unnamed (Rectangle) -->
+                    <div id="u39" class="ax_default label">
+                      <div id="u39_div" class=""></div>
+                      <div id="u39_text" class="text ">
+                        <p><span>该不该</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 相对固定 (Dynamic Panel) [footnote] -->
+      <div id="u1_ann" class="annotation"></div>
+    </div>
+  </body>
+</html>
